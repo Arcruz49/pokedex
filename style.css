@@ -1,25 +1,68 @@
-
-*{
+* {
     box-sizing: border-box;
 }
-html, body{
+
+html, body {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
-div#container{
+
+#backgorundDiv {
+    display: flex;
+    justify-content: space-between; /* Add this line to separate the divs */
+    width: 1000px;
+    margin: 0 auto; /* Center the container */
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px black;
+}
+
+div#containerLeft {
     width: 200px;
-    background-color: lightgray;
-    border-radius: 10px;
-    box-shadow: 5px 5px 3px black;
-    margin: 3% auto 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid black;
     padding: 5px;
 }
 
+div#containerRight {
+    width: 790px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Add the following styles to position the containers */
+#containerLeft {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+#containerRight {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+span {
+    display: block;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+#pic{
+    width: 200px;
+}
 
 
 body {
-    font-size: 10px; 
+    font-size: 12px; 
     font-family: Roboto, sans-serif;
-    background-color: #ff7b73;
+    background-color: #2b2928;
     
     margin: 0;
     display: grid;

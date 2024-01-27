@@ -1,4 +1,10 @@
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function fetchPokemonData(id) {
+    if(isNaN(id)) id = id.toLowerCase();
+
     let url = 'https://pokeapi.co/api/v2/pokemon/' + id + '/';
 
     return fetch(url)
@@ -15,7 +21,7 @@ function carregaPokemon(){
     if (id !== "") {
         fetchPokemonData(id)
             .then((data) => {
-                document.getElementById(`nomePokemon`).innerHTML = data['name'];
+                document.getElementById(`nomePokemon`).innerHTML = capitalizeFirstLetter(data['name']);
                 document.getElementById(`numero`).innerHTML = data['id'];
                 let img = data['sprites']['front_default'];
                 document.getElementById(`pic`).setAttribute('src', img);
@@ -28,7 +34,8 @@ function trocaImagem(){
     fetchPokemonData(id)
         .then((data) => {
             let img = data['sprites']['back_default'];
-            document.getElementById(`pic`).setAttribute('src', img);
+            if(img != null)
+                document.getElementById(`pic`).setAttribute('src', img);
         });
 }
 
@@ -41,6 +48,7 @@ function voltaImagem() {
         });
 }
 
+
 document.getElementById(`pic`).onmouseenter = trocaImagem;
 document.getElementById(`pic`).onmouseleave = voltaImagem;
-document.getElementById(`btn1`).onclick = carregaPokemon;
+document.getElementById(`txtPokemon`).oninput = carregaPokemon;
