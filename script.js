@@ -51,7 +51,7 @@ function setTipos(data){
 
 function mudaCorTipo(n, tipo){
     var color = "";
-
+    debugger
     switch(tipo){
         case "bug":
             color = "#a3b21e"
@@ -62,7 +62,7 @@ function mudaCorTipo(n, tipo){
         case "dragon":
             color = "#a89beb"
             break;
-        case "eletric":
+        case "electric":
             color = "#fcb816"
             break;
         case "fairy":
