@@ -3,13 +3,14 @@ function capitalizeFirstLetter(string) {
 }
 
 function fetchPokemonData(id) {
+    debugger
     if(isNaN(id)) id = id.toLowerCase();
     if (id === "2249*") {
         let img = 'images/estEgg.jpg';
         document.getElementById('pic').setAttribute('src', img);
         return;
     }
-    
+        
     let url = 'https://pokeapi.co/api/v2/pokemon/' + id + '/';
         
     return fetch(url)
@@ -48,9 +49,11 @@ function setTipos(data){
         const typeName2 = data.types[1].type.name;
         document.getElementById('tipo2').innerHTML = typeName2;
         mudaCorTipo(2, typeName2);
+        document.getElementById('tipo2').style.display = 'inline-block';
     }
     else{
         document.getElementById('tipo2').innerHTML = "";
+        document.getElementById('tipo2').style.display = 'none';
     }
 }
 
