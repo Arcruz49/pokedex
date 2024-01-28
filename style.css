@@ -13,8 +13,7 @@ html, body {
     justify-content: space-between; /* Add this line to separate the divs */
     width: 1000px;
     margin: 0 auto; /* Center the container */
-    border: 1px solid black;
-    box-shadow: 2px 2px 1px black;
+
 }
 
 div#containerLeft {
@@ -23,23 +22,26 @@ div#containerLeft {
     border-radius: 5px;
     border: 1px solid black;
     padding: 5px;
+    box-shadow: 2px 2px 1px black;
 }
+
 
 div#containerRight {
     width: 790px;
+    text-align: left;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     border: 1px solid black;
     padding: 5px;
+    box-shadow: 2px 2px 1px black;
 }
 
-/* Add the following styles to position the containers */
 #containerLeft {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px; 
 }
 
 #containerRight {
-    margin-left: 10px; /* Adjust the margin as needed */
+    margin-left: 10px; 
 }
 
 span {
@@ -47,9 +49,40 @@ span {
     margin-top: 5px;
 }
 
+#lblTipo {
+    font-family: Roboto, sans-serif;
+    font-weight: bold; 
+}
 
+#divTipo{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
 
+#tipo1{
+    display: inline-block;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 5px;
+    color: #ffff;
+    font-size: 12px; 
+    font-weight: bold; 
+    transform: scale(1);
+}
 
+#tipo2{
+    display: inline-block;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 5px;
+    color: #ffff;
+    font-size: 12px; 
+    font-weight: bold; 
+    transform: scale(1);
+}
 
 
 
@@ -174,7 +207,7 @@ body {
 }
 
 .c-form__input {
-    color: #ffcccc;
+    color: #ff7b73;
     height: 100%;
     width: 100%;
     padding: 0 0.714em;
@@ -197,7 +230,7 @@ body {
 }
 
 .c-form__buttonLabel {
-    color: #ffaea9;
+    color: #ff7b73;
     height: 100%;
     width: auto;
     
@@ -216,5 +249,5 @@ body {
     padding: 0;
     height: 100%;
     width: 5em;
-    background-color: #ffaea9;
+    background-color: #ff7b73;
 }
