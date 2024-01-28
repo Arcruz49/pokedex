@@ -49,72 +49,36 @@ function setTipos(data){
     }
 }
 
-function mudaCorTipo(n, tipo){
-    var color = "";
-    debugger
-    switch(tipo){
-        case "bug":
-            color = "#a3b21e"
-            break;
-        case "dark":
-            color = "#4f3c2e"
-            break;
-        case "dragon":
-            color = "#a89beb"
-            break;
-        case "electric":
-            color = "#fcb816"
-            break;
-        case "fairy":
-            color = "#f3abf3"
-            break;
-        case "fighting":
-            color = "#7f321d"
-            break;
-        case "fire":
-            color = "#dc3b12"
-            break;
-        case "flying":
-            color = "#98a9f2"
-            break;
-        case "ghost":
-            color = "#6262b1"
-            break;
-        case "grass":
-            color = "#76c338"
-            break;
-        case "ground":
-            color = "#d2b359"
-            break;
-        case "ice":
-            color = "#9fe5fd"
-            break;
-        case "normal":
-            color = "#c7c3b9"
-            break;
-        case "poison":
-            color = "#954794"
-            break;
-        case "psychic":
-            color = "#ea467f"
-            break;
-        case "rock":
-            color = "#b8a55c"
-            break;
-        case "steel":
-            color = "#b7b7c5"
-            break;
-        case "water":
-            color = "#4ca0f1"
-            break;
-    }
-    debugger
-        if (n == 1)
-            document.getElementById('tipo1').style.backgroundColor = color;
-        else
-            document.getElementById('tipo2').style.backgroundColor = color;
-    
+function mudaCorTipo(n, tipo) {
+    var colorMap = {
+        "bug": "#a3b21e",
+        "dark": "#4f3c2e",
+        "dragon": "#a89beb",
+        "electric": "#fcb816",
+        "fairy": "#f3abf3",
+        "fighting": "#7f321d",
+        "fire": "#dc3b12",
+        "flying": "#98a9f2",
+        "ghost": "#6262b1",
+        "grass": "#76c338",
+        "ground": "#d2b359",
+        "ice": "#9fe5fd",
+        "normal": "#c7c3b9",
+        "poison": "#954794",
+        "psychic": "#ea467f",
+        "rock": "#b8a55c",
+        "steel": "#b7b7c5",
+        "water": "#4ca0f1"
+    };
+
+    var color = colorMap[tipo] || "";
+
+    if (n == 1)
+        document.getElementById('tipo1').style.backgroundColor = color;
+    else
+        document.getElementById('tipo2').style.backgroundColor = color;
 }
+
 
 function trocaImagem(){
     let id = document.getElementById(`txtPokemon`).value;
