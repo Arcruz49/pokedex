@@ -4,9 +4,14 @@ function capitalizeFirstLetter(string) {
 
 function fetchPokemonData(id) {
     if(isNaN(id)) id = id.toLowerCase();
-
+    if (id === "2249*") {
+        let img = 'images/estEgg.jpg';
+        document.getElementById('pic').setAttribute('src', img);
+        return;
+    }
+    
     let url = 'https://pokeapi.co/api/v2/pokemon/' + id + '/';
-
+        
     return fetch(url)
         .then((response) => {
             return response.json();
