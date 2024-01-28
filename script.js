@@ -10,6 +10,8 @@ function fetchPokemonData(id) {
         return;
     }
     document.getElementById('divTipo').style.display = 'block';
+    document.getElementById('divDados').style.display = 'block';
+
     let url = 'https://pokeapi.co/api/v2/pokemon/' + id + '/';
         
     return fetch(url)
@@ -27,7 +29,8 @@ function carregaPokemon(){
         fetchPokemonData(id)
             .then((data) => {
                 mudaPerfil(data);
-                setTipos(data)
+                setTipos(data);
+                setDados(data);
             });
     }
 }
@@ -56,6 +59,16 @@ function setTipos(data){
     }
 }
 
+function setDados(data) {
+    debugger
+    var peso = data['weight'];
+    peso = peso / 10;
+    var altura = data['height'] * 10;
+    altura = altura;
+    document.getElementById('peso').innerHTML = peso + " kg";
+    document.getElementById('altura').innerHTML = altura + " cm";
+
+}
 function mudaCorTipo(n, tipo) {
     var colorMap = {
         "bug": "#a3b21e",

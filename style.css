@@ -55,6 +55,7 @@ span {
 }
 
 #divTipo{
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row; 
     align-items: center;
@@ -84,7 +85,34 @@ span {
     transform: scale(1);
 }
 
+#divDados {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
 
+#divDados label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#divDados span {
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+#divDados #lblPeso {
+    margin-right: 5px;
+}
+
+#divDados #peso {
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
 
 
 #pic{
