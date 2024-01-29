@@ -100,8 +100,7 @@ function mudaCorTipo(n, tipo) {
 }
 
 function setExperiencia(data){
-    debugger
-    document.getElementById('experiencia').innerHTML = data['base_experience'];
+    document.getElementById('experiencia').innerHTML = data['base_experience'] + " xp";
 }
 
 function trocaImagem(){
