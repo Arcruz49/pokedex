@@ -31,6 +31,7 @@ function carregaPokemon(){
                 mudaPerfil(data);
                 setTipos(data);
                 setDados(data);
+                setExperiencia(data);
             });
     }
 }
@@ -60,7 +61,6 @@ function setTipos(data){
 }
 
 function setDados(data) {
-    debugger
     var peso = data['weight'];
     peso = peso / 10;
     var altura = data['height'] * 10;
@@ -99,6 +99,10 @@ function mudaCorTipo(n, tipo) {
         document.getElementById('tipo2').style.backgroundColor = color;
 }
 
+function setExperiencia(data){
+    debugger
+    document.getElementById('experiencia').innerHTML = data['base_experience'];
+}
 
 function trocaImagem(){
     let id = document.getElementById(`txtPokemon`).value;

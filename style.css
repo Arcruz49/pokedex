@@ -10,9 +10,9 @@ html, body {
 
 #backgorundDiv {
     display: flex;
-    justify-content: space-between; /* Add this line to separate the divs */
+    justify-content: space-between; 
     width: 1000px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
 
 }
 
@@ -44,9 +44,8 @@ div#containerRight {
     margin-left: 10px; 
 }
 
-span {
+#divTipo, span {
     display: block;
-    margin-top: 5px;
 }
 
 #lblTipo {
@@ -88,8 +87,15 @@ span {
 #divDados {
     margin-bottom: 30px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;  
     align-items: center;
+}
+
+#divDados div {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    margin-right: 15px;   
 }
 
 #divDados label {
@@ -101,7 +107,7 @@ span {
 #divDados span {
     font-size: 12px;
     font-weight: bold;
-    white-space: nowrap; /* Impede a quebra de linha */
+    white-space: nowrap; 
 }
 
 #divDados #lblPeso {
@@ -111,7 +117,7 @@ span {
 #divDados #peso {
     font-size: 12px;
     font-weight: bold;
-    white-space: nowrap; /* Impede a quebra de linha */
+    white-space: nowrap; 
 }
 
 
